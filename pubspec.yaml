@@ -1,0 +1,17 @@
+name: discord_form_flutter
+description: A simple, clean looking form
+version: 0.0.1
+author: Ayman Alzahrani <aymanz.dev@gmail.com>
+homepage: https://github.com/AymanProjects/discord_form_flutter
+
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=1.17.0"
+dependencies:
+  flutter:
+    sdk: flutter
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
