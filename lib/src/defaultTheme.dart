@@ -13,7 +13,7 @@ final ThemeData defaultTheme = ThemeData(
   ),
   textTheme: TextTheme(
     /// The form field text style
-    subtitle1: TextStyle(color: Colors.white, fontSize: 14),
+    subtitle1: TextStyle(color: Colors.white),
   ),
   scaffoldBackgroundColor: darkBlue,
   primaryColor: blue,

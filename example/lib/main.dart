@@ -75,13 +75,13 @@ class _AppState extends State<App> {
           isLoading: _loading,
           onPressed: () {
             if (_formKey.currentState.validate()) {
-              print('Signed up succesfully!'
+              print('logged in succesfully!'
                   ' Email: $_email, Password: $_password');
             }
           },
           text: Text(
-            'Sign up',
-            style: TextStyle(fontSize: 14.0),
+            'Login',
+            style: TextStyle(fontSize: 15.0),
           ),
         ),
       ],

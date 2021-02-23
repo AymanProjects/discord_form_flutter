@@ -50,25 +50,28 @@ class DiscordFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      controller: controller,
+    return Theme(
+      data: Theme.of(context).copyWith(accentColor: Colors.white),
+      child: TextFormField(
+        controller: controller,
 
-      /// if isEmail is false, show a regular keyboard
-      keyboardType: isEmail ? TextInputType.emailAddress : TextInputType.text,
-      obscureText: isPassword,
-      onChanged: onChanged,
-      validator: validator,
-      decoration: InputDecoration(
-        hintText: hint,
-        suffixIcon: icon,
-        contentPadding: const EdgeInsets.all(12.0),
+        /// if isEmail is false, show a regular keyboard
+        keyboardType: isEmail ? TextInputType.emailAddress : TextInputType.text,
+        obscureText: isPassword,
+        onChanged: onChanged,
+        validator: validator,
+        decoration: InputDecoration(
+          hintText: hint,
+          suffixIcon: icon,
+          contentPadding: const EdgeInsets.all(12.0),
 
-        /// The fill color is [Theme.inputDecorationTheme.fillColor]
-        filled: true,
-        enabledBorder: _border(),
-        focusedBorder: _border(color: Theme.of(context).primaryColor),
-        errorBorder: _border(color: Theme.of(context).errorColor),
-        focusedErrorBorder: _border(color: Theme.of(context).errorColor),
+          /// The fill color is [Theme.inputDecorationTheme.fillColor]
+          filled: true,
+          enabledBorder: _border(),
+          focusedBorder: _border(color: Theme.of(context).primaryColor),
+          errorBorder: _border(color: Theme.of(context).errorColor),
+          focusedErrorBorder: _border(color: Theme.of(context).errorColor),
+        ),
       ),
     );
   }
@@ -77,7 +80,6 @@ class DiscordFormField extends StatelessWidget {
     return OutlineInputBorder(
       borderSide: BorderSide(
         color: color ?? Colors.black,
-        width: 1,
       ),
     );
   }
